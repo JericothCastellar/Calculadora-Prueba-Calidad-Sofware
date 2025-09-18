@@ -3,26 +3,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+
 /**
  *
  * @author leofa
  */
+
+
 public class Calculadora {
 
     private int validaNumero(String variable) {
         if (!variable.matches("-?\\d+")) {
-            throw new IllegalArgumentException("Entrada invalidada: ' " + variable + "' Esto no es un numero");
+            throw new IllegalArgumentException("Entrada invalidada: '" + variable + "' Esto no es un numero");
         }
         return Integer.parseInt(variable);
     }
 
     public int sumar(String a, String b) {
         return validaNumero(a) + validaNumero(b);
-
     }
 
     public int dividir(String a, String b) {
-
         int divisor = validaNumero(b);
         if (divisor == 0) {
             throw new IllegalArgumentException("No se puede dividir entre cero");

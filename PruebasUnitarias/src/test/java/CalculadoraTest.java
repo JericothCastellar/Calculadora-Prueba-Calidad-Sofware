@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -39,7 +36,6 @@ public class CalculadoraTest {
     @Test
     void testRestarNegativos() {
         assertEquals(-50, calc.restar("0", "50"));
-
     }
 
     @Test
@@ -63,5 +59,4 @@ public class CalculadoraTest {
         Exception ex = assertThrows(IllegalArgumentException.class, () -> calc.multiplicar("10", "?"));
         assertTrue(ex.getMessage().contains("Esto no es un numero"));
     }
-
 }
